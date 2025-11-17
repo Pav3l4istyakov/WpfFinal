@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfFinal.NewTaskWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFinal"
+        mc:Ignorable="d"
+     Title="Добавить дело" Height="450" Width="400" ResizeMode="NoResize" Background="#FFFDFAF1">
+    <Window.Resources>
+        <Style x:Key="HeaderStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Margin" Value="10,5,0,5"/>
+            <Setter Property="Foreground" Value="#5EBEC4"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Cascadia Mono"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Добавить дело" Style="{StaticResource HeaderStyle}" HorizontalAlignment="Left" Margin="10"/>
+            <TextBlock Text="Название:" Margin="5"/>
+            <TextBox Name="TitleTextBox" Margin="5"/>
+            <TextBlock Text="Выполнить до:" Margin="5"/>
+            <DatePicker Name="DueDatePicker" BorderThickness="1.5" BorderBrush="#5EBEC4" Background="White" SelectedDateFormat="Long" Margin="5"/>
+            <TextBlock Text="Описание:" Margin="5"/>
+            <ScrollViewer Margin="5" Height="100" VerticalScrollBarVisibility="Auto">
+                <TextBox Name="DescriptionTextBox" AcceptsReturn="True" TextWrapping="Wrap" BorderThickness="0"/>
+            </ScrollViewer>
+            <Button Content="Сохранить дело" Margin="5" Background="#5EBEC4" Click="SaveButtonClick"/>
+        </StackPanel>
+    </Grid>
+</Window>

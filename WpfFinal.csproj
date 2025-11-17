@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Image\add.png" />
+    <None Remove="Image\delete.png" />
+    <None Remove="Image\icon.png" />
+    <None Remove="Image\save.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\add.png" />
+    <Resource Include="Image\delete.png" />
+    <Resource Include="Image\icon.png" />
+    <Resource Include="Image\save.png" />
+  </ItemGroup>
+
+</Project>
